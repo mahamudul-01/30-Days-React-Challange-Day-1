@@ -1,3 +1,4 @@
+import Todo from "./Todo";
 
 function App() {
   
@@ -9,6 +10,9 @@ function App() {
       <Person></Person>
       <Person></Person>
       <DeviceList name='laptop' price='500'></DeviceList>
+      <Todo task={'Learn rect 30 days'} isDone={false}></Todo>
+      <Todo task={'complete project '} isDone={false}></Todo>
+      <Todo task={'push code every day in git'} isDone={true}></Todo>
     </>
   )
 }
