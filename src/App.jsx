@@ -1,9 +1,18 @@
+import Actor from "./Actor";
+import Singer from "./Singer";
 import Todo from "./Todo";
 
 function App() {
-  
+  const actorName=['Mehedi', 'Sahrukh' ,' Salman', 'Amir' , 'John']
+
+  const singerDetails=[
+    {id:1,name:'Atif Aslam', age:'35', country:'pakisthan'},
+    {id:2,name:'Arjit', age:'45', country:'India'},
+    {id:3,name:'Pritom', age:'30', country:'Bangladesh'},
+  ]
 
   return (
+    
     <>
       <h1>Mahamudul Hasan mehedi</h1>
       <Person></Person>
@@ -13,6 +22,17 @@ function App() {
       <Todo task={'Learn rect 30 days'} isDone={false}></Todo>
       <Todo task={'complete project '} isDone={false}></Todo>
       <Todo task={'push code every day in git'} isDone={true}></Todo>
+      <hr />
+
+      {/* mapping */}
+      {
+        actorName.map(actor=> <Actor name={actor}></Actor>)
+      }
+      <h1>singer details</h1>
+      <hr />
+      {
+        singerDetails.map(singer=> <Singer singer={singer}></Singer>)
+      }
     </>
   )
 }
